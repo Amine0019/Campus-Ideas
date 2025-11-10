@@ -1,11 +1,11 @@
 <div class="list-suggestion-container">
-  <h1 class="page-title">Liste des suggestions</h1>
+  <h1 class="page-title">{{titre}}</h1>
 
   <div class="search-container">
     <input
       type="text"
       class="search-input"
-      placeholder="Rechercher une suggestion"
+      [placeholder]="placeHolderTexte"
   />
   </div>
 
@@ -31,7 +31,7 @@
             <span class="icon">👍</span>
            nb likes
           </button>
-          <button class="btn-favorite">
+          <button class="btn-favorite"(click)="addToFavorite()">
             <span class="icon">❤️</span>
             Ajouter aux favoris
           </button>
