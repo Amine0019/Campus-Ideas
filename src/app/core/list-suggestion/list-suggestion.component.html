@@ -24,7 +24,13 @@
       <p class="suggestion-description">{{ s.description }}</p>
 
       <div class="card-footer">
-        <span class="status">{{ s.status }}</span>
+        <span class="status" [ngClass]="{
+          'status-accepted':s.status=='acceptee' ,
+          'status-pending':s.status=='en attente',
+          'status-rejected':s.status=='refusee'
+        }">
+          {{ s.status }}
+        </span>
 
         <div class="action-buttons">
           <button class="btn-like">
