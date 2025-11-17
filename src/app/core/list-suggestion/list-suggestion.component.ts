@@ -9,9 +9,15 @@ import { Suggestion } from '../../models/suggestion';
 export class ListSuggestionComponent {
   titre: string = "Liste des suggestions";
   placeHolderTexte: string = "Rechercher une suggestion";
-
-  addToFavorite() {
-    console.log("Ajouter aux favoris");
+  list: Suggestion[] = [];
+  addToFavorite(s: Suggestion) {
+    this.list.push(s);
+    console.log(this.list);
+  }
+  like(suggestion: Suggestion) {
+    
+      suggestion.nblikes ++;
+    
   }
 
   suggestions: Suggestion[] = [

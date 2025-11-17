@@ -33,12 +33,12 @@
         </span>
 
         <div class="action-buttons">
-          <button class="btn-like">
+          <button class="btn-like" (click)="like(s)">
             <span class="icon">👍</span>
-            nb likes
+            {{ s.nblikes }} 
           </button>
 
-          <button class="btn-favorite" (click)="addToFavorite()">
+          <button class="btn-favorite" (click)="addToFavorite(s)">
             <span class="icon">❤️</span>
             Ajouter aux favoris
           </button>
